@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <scenes>
+        <!--Upload View Controller-->
+        <scene sceneID="UJL-nW-GTF">
+            <objects>
+                <viewController storyboardIdentifier="FLCUploadViewController" id="GP1-Vp-RaB" customClass="FLCUploadViewController" sceneMemberID="viewController">
+                    <view key="view" id="tEc-uH-qqb" customClass="FLCColorizedView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView translatesAutoresizingMaskIntoConstraints="NO" id="cOW-wT-ZpB">
+                                <rect key="frame" x="94" y="63" width="263" height="174"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="comingsoon2" id="pkr-SG-efX"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cOW-wT-ZpB" firstAttribute="centerX" secondItem="tEc-uH-qqb" secondAttribute="centerX" id="1n9-V4-9eB"/>
+                            <constraint firstItem="cOW-wT-ZpB" firstAttribute="centerY" secondItem="tEc-uH-qqb" secondAttribute="centerY" id="TD1-ag-7ps"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <customObject id="XLa-Zy-wNp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="483"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="comingsoon2" width="263" height="174"/>
+    </resources>
+</document>

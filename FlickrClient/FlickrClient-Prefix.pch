@@ -1,0 +1,18 @@
+//
+//  FlickrClient-Prefix.pch
+//  FlickrClient
+//
+//  Created by Evgeniy Gurtovoy on 6/24/16.
+//  Copyright © 2016 Evgeniy Gurtovoy. All rights reserved.
+//
+
+#ifndef FlickrClient_Prefix_pch
+#define FlickrClient_Prefix_pch
+
+#import <CoreData/CoreData.h>
+#import <HardCoreData/HCDCoreDataStackController.h>
+#import <macros_blocks/macros_blocks.h>
+
+#define weak_self __weak __typeof(self)
+
+#endif /* FlickrClient_Prefix_pch */

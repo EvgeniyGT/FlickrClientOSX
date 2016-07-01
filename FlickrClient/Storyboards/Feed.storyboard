@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <scenes>
+        <!--Feed List View Controller-->
+        <scene sceneID="bXR-Uz-42e">
+            <objects>
+                <viewController storyboardIdentifier="FLCFeedListViewController" id="jUV-qE-qqp" customClass="FLCFeedListViewController" sceneMemberID="viewController">
+                    <view key="view" id="HJN-cX-mI6" customClass="FLCColorizedView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-ek-Mbx">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="0QA-83-oho">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="5mm-X1-dGu">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <binding destination="AD1-un-FkD" name="content" keyPath="arrangedObjects" id="TAB-Ss-Ix4"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="bY4-be-Z9P">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="y2G-j9-Lag">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Waj-ek-Mbx" secondAttribute="bottom" id="0yb-rE-Aqn"/>
+                            <constraint firstItem="Waj-ek-Mbx" firstAttribute="leading" secondItem="HJN-cX-mI6" secondAttribute="leading" id="Ac6-bj-3FJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Waj-ek-Mbx" secondAttribute="trailing" id="I0R-fc-Vaq"/>
+                            <constraint firstItem="Waj-ek-Mbx" firstAttribute="top" secondItem="HJN-cX-mI6" secondAttribute="top" id="hnl-vS-fPG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="5mm-X1-dGu" id="0Cf-I7-cGu"/>
+                    </connections>
+                </viewController>
+                <customObject id="sd5-xK-82S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="FLCFeedPhoto" automaticallyPreparesContent="YES" id="AD1-un-FkD" customClass="FLCFeedListArrayController">
+                    <connections>
+                        <binding destination="jUV-qE-qqp" name="managedObjectContext" keyPath="self.coreDataController.stack.mainManagedObjectContext" id="sfr-Qa-Sy0"/>
+                    </connections>
+                </arrayController>
+            </objects>
+            <point key="canvasLocation" x="484" y="573"/>
+        </scene>
+        <!--Photo Collection View Item-->
+        <scene sceneID="Dl9-m1-zuf">
+            <objects>
+                <collectionViewItem storyboardIdentifier="FLCPhotoCollectionViewItem" id="fNr-Ci-BhA" customClass="FLCPhotoCollectionViewItem" sceneMemberID="viewController">
+                    <view key="view" id="6K3-es-43h">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-E0-9p6" customClass="FLCColorizedView">
+                                <rect key="frame" x="10" y="0.0" width="80" height="90"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-tb-fRb">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="huj-Hu-r7I"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wbT-tb-fRb" firstAttribute="top" secondItem="Jsv-E0-9p6" secondAttribute="top" id="1QV-U7-5xo"/>
+                                    <constraint firstAttribute="trailing" secondItem="wbT-tb-fRb" secondAttribute="trailing" id="BAf-Op-3QD"/>
+                                    <constraint firstAttribute="bottom" secondItem="wbT-tb-fRb" secondAttribute="bottom" id="FaG-Dq-ib5"/>
+                                    <constraint firstItem="wbT-tb-fRb" firstAttribute="leading" secondItem="Jsv-E0-9p6" secondAttribute="leading" id="dSW-Pp-267"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bDL-84-SnH">
+                                <rect key="frame" x="8" y="0.0" width="84" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="SLQ-MY-GSQ">
+                                    <font key="font" size="13" name="AvenirNext-Regular"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="fNr-Ci-BhA" name="displayPatternValue1" keyPath="self.representedObject.title" id="2Ef-Ra-FV9">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayPattern">%{value1}@</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jsv-E0-9p6" secondAttribute="bottom" id="67Q-Na-gh7"/>
+                            <constraint firstItem="Jsv-E0-9p6" firstAttribute="top" secondItem="6K3-es-43h" secondAttribute="top" constant="10" id="Dwu-x7-a40"/>
+                            <constraint firstItem="bDL-84-SnH" firstAttribute="leading" secondItem="6K3-es-43h" secondAttribute="leading" constant="10" id="HER-rm-ZaT"/>
+                            <constraint firstAttribute="trailing" secondItem="bDL-84-SnH" secondAttribute="trailing" constant="10" id="KJM-GE-vAG"/>
+                            <constraint firstAttribute="bottom" secondItem="bDL-84-SnH" secondAttribute="bottom" id="O9z-Kf-NPW"/>
+                            <constraint firstItem="Jsv-E0-9p6" firstAttribute="leading" secondItem="6K3-es-43h" secondAttribute="leading" constant="10" id="a1G-Ma-HYH"/>
+                            <constraint firstAttribute="trailing" secondItem="Jsv-E0-9p6" secondAttribute="trailing" constant="10" id="yWO-a4-czi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="wbT-tb-fRb" id="JR2-qV-Ns1"/>
+                    </connections>
+                </collectionViewItem>
+                <customObject id="MdC-sn-ahI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="1Hl-LM-alq"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="473"/>
+        </scene>
+    </scenes>
+</document>

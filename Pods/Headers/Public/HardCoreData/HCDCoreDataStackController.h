@@ -1,0 +1,1 @@
+../../../HardCoreData/Pod/Classes/HCDCoreDataStackController.h
