@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */; };
+		593264331D2AEB9A00F40331 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264321D2AEB9A00F40331 /* NSImage+Resize.m */; };
 		595888F31D255A6F00BF95DA /* FLCFeedListArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */; };
 		595888F81D25648000BF95DA /* FLCPhotoCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F71D25648000BF95DA /* FLCPhotoCollectionViewItem.m */; };
 		595888FC1D2570E800BF95DA /* FLCColorizedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888FB1D2570E800BF95DA /* FLCColorizedView.m */; };
 		595889091D25868500BF95DA /* NSImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 595889001D25868500BF95DA /* NSImageView+WebCache.m */; };
 		5958890A1D25868500BF95DA /* OTFileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 595889031D25868500BF95DA /* OTFileCacheManager.m */; };
-		5958890B1D25868500BF95DA /* OTHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 595889061D25868500BF95DA /* OTHTTPRequest.m */; };
+		5958890B1D25868500BF95DA /* OTHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 595889061D25868500BF95DA /* OTHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5958890C1D25868500BF95DA /* OTWebImageDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 595889081D25868500BF95DA /* OTWebImageDownloadRequest.m */; };
 		596672FA1D0F5C9600E7EA15 /* FLCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596672F91D0F5C9600E7EA15 /* FLCMainViewController.m */; };
 		5970384F1D11E69200E913F8 /* NSStoryboardSegue+SegueDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = 5970384E1D11E69200E913F8 /* NSStoryboardSegue+SegueDestination.m */; };
@@ -83,6 +84,8 @@
 		4C842DCD70CC4EE2986C9F0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5905A9641D26B96800C12EF9 /* FLCFeedCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedCellView.h; sourceTree = "<group>"; };
 		5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedCellView.m; sourceTree = "<group>"; };
+		593264311D2AEB9A00F40331 /* NSImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Resize.h"; sourceTree = "<group>"; };
+		593264321D2AEB9A00F40331 /* NSImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Resize.m"; sourceTree = "<group>"; };
 		595888F11D255A6F00BF95DA /* FLCFeedListArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedListArrayController.h; sourceTree = "<group>"; };
 		595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedListArrayController.m; sourceTree = "<group>"; };
 		595888F61D25648000BF95DA /* FLCPhotoCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCPhotoCollectionViewItem.h; sourceTree = "<group>"; };
@@ -226,6 +229,15 @@
 				5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */,
 			);
 			path = FeedCellView;
+			sourceTree = "<group>";
+		};
+		5932642D1D2AEA9800F40331 /* NSImage */ = {
+			isa = PBXGroup;
+			children = (
+				593264311D2AEB9A00F40331 /* NSImage+Resize.h */,
+				593264321D2AEB9A00F40331 /* NSImage+Resize.m */,
+			);
+			path = NSImage;
 			sourceTree = "<group>";
 		};
 		594C42FA1D1C3B1400B9B221 /* Networking */ = {
@@ -606,6 +618,7 @@
 		5996FBAD1D0AF27900226E3D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				5932642D1D2AEA9800F40331 /* NSImage */,
 				599246121D1D776800EE72E6 /* NSManagedObject */,
 				599245CC1D1D579500EE72E6 /* HCDCoreDataStackController */,
 				5970385C1D12081D00E913F8 /* CABasicAnimation */,
@@ -1097,6 +1110,7 @@
 				5958890B1D25868500BF95DA /* OTHTTPRequest.m in Sources */,
 				599246101D1D76D600EE72E6 /* FLCFeedPage.m in Sources */,
 				599245D81D1D66E500EE72E6 /* FLCAPIResponseHandler.m in Sources */,
+				593264331D2AEB9A00F40331 /* NSImage+Resize.m in Sources */,
 				5970385B1D11FEAB00E913F8 /* NSColor+HexString.m in Sources */,
 				5996FBD51D0B019000226E3D /* FLCTabBarAnimator.m in Sources */,
 				597038521D11E6FE00E913F8 /* NSViewController+SegueDestination.m in Sources */,

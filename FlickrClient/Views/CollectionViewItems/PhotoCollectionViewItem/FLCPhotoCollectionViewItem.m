@@ -12,8 +12,9 @@
 
 #import "NSImageView+WebCache.h"
 #import "NSColor+HexString.h"
+#import "NSImage+Resize.h"
 
-@interface FLCPhotoCollectionViewItem ()
+@interface FLCPhotoCollectionViewItem () <NSImageViewWebCacheDelegate>
 
 /* UI */
 @property (weak, nonatomic) IBOutlet NSImageView *photoImageView;
@@ -47,10 +48,11 @@
 {
     FLCFeedPhoto *feedPhoto = self.representedObject;
     NSURL *url = [NSURL URLWithString:feedPhoto.url];
+    self.photoImageView.webCacheDelegate = self;
     [self.photoImageView setImageURL:url];
 }
 
-#pragma mark - Copy
+#pragma mark - copyWithZone
 
 - (instancetype)copyWithZone:(NSZone *)zone
 {
@@ -58,5 +60,19 @@
     FLCPhotoCollectionViewItem *item = [self.storyboard instantiateControllerWithIdentifier:itemStoryboardIdentifier];
     return item;
 }
+
+#pragma mark - NSImageViewWebCacheDelegate
+
+- (void)imageView:(NSImageView *)imageView downloadImageSuccessed:(NSImage *)image data:(NSData *)data
+{
+    imageView.image = nil;
+    imageView.image = [image resizedToSize:imageView.bounds.size usingScalingMode:ViewScalingModeScaleAspectFill];
+}
+
+- (void)imageViewDownloadImageFailed:(NSImageView *)imageView
+{
+    NSLog(@"image loading failed");
+}
+
 
 @end
