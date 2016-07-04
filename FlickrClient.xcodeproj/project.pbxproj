@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */; };
 		593264331D2AEB9A00F40331 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264321D2AEB9A00F40331 /* NSImage+Resize.m */; };
 		593264361D2AF2AF00F40331 /* FLCNoTitleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264351D2AF2AF00F40331 /* FLCNoTitleTransformer.m */; };
+		5932643A1D2AF4CF00F40331 /* FLCMouseTrackingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264391D2AF4CF00F40331 /* FLCMouseTrackingView.m */; };
+		593264401D2AFA5B00F40331 /* FLCWobbleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5932643F1D2AFA5B00F40331 /* FLCWobbleAnimator.m */; };
+		593264441D2AFB5700F40331 /* FLCTabBarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264431D2AFB5700F40331 /* FLCTabBarAnimator.m */; };
 		595888F31D255A6F00BF95DA /* FLCFeedListArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */; };
 		595888F81D25648000BF95DA /* FLCPhotoCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F71D25648000BF95DA /* FLCPhotoCollectionViewItem.m */; };
 		595888FC1D2570E800BF95DA /* FLCColorizedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888FB1D2570E800BF95DA /* FLCColorizedView.m */; };
@@ -47,7 +49,6 @@
 		5996FBC81D0AF93200226E3D /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5996FBC71D0AF93200226E3D /* Upload.storyboard */; };
 		5996FBCC1D0B00B800226E3D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5996FBCB1D0B00B800226E3D /* QuartzCore.framework */; };
 		5996FBD11D0B016200226E3D /* FLCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5996FBD01D0B016200226E3D /* FLCTabBarViewController.m */; };
-		5996FBD51D0B019000226E3D /* FLCTabBarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5996FBD41D0B019000226E3D /* FLCTabBarAnimator.m */; };
 		5996FBD81D0B08B900226E3D /* NSViewController+Containment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5996FBD71D0B08B900226E3D /* NSViewController+Containment.m */; };
 		59A0EDA01D1C3E3F007B7288 /* FLCAPIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A0ED9F1D1C3E3F007B7288 /* FLCAPIConfiguration.m */; };
 		59A0EDA31D1C3E55007B7288 /* FLCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A0EDA21D1C3E55007B7288 /* FLCRequestManager.m */; };
@@ -83,12 +84,16 @@
 
 /* Begin PBXFileReference section */
 		4C842DCD70CC4EE2986C9F0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		5905A9641D26B96800C12EF9 /* FLCFeedCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedCellView.h; sourceTree = "<group>"; };
-		5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedCellView.m; sourceTree = "<group>"; };
 		593264311D2AEB9A00F40331 /* NSImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Resize.h"; sourceTree = "<group>"; };
 		593264321D2AEB9A00F40331 /* NSImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Resize.m"; sourceTree = "<group>"; };
 		593264341D2AF2AF00F40331 /* FLCNoTitleTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCNoTitleTransformer.h; sourceTree = "<group>"; };
 		593264351D2AF2AF00F40331 /* FLCNoTitleTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCNoTitleTransformer.m; sourceTree = "<group>"; };
+		593264381D2AF4CF00F40331 /* FLCMouseTrackingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCMouseTrackingView.h; sourceTree = "<group>"; };
+		593264391D2AF4CF00F40331 /* FLCMouseTrackingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCMouseTrackingView.m; sourceTree = "<group>"; };
+		5932643E1D2AFA5B00F40331 /* FLCWobbleAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCWobbleAnimator.h; sourceTree = "<group>"; };
+		5932643F1D2AFA5B00F40331 /* FLCWobbleAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCWobbleAnimator.m; sourceTree = "<group>"; };
+		593264421D2AFB5700F40331 /* FLCTabBarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCTabBarAnimator.h; sourceTree = "<group>"; };
+		593264431D2AFB5700F40331 /* FLCTabBarAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCTabBarAnimator.m; sourceTree = "<group>"; };
 		595888F11D255A6F00BF95DA /* FLCFeedListArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedListArrayController.h; sourceTree = "<group>"; };
 		595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedListArrayController.m; sourceTree = "<group>"; };
 		595888F61D25648000BF95DA /* FLCPhotoCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCPhotoCollectionViewItem.h; sourceTree = "<group>"; };
@@ -163,8 +168,6 @@
 		5996FBCB1D0B00B800226E3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5996FBCF1D0B016200226E3D /* FLCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCTabBarViewController.h; sourceTree = "<group>"; };
 		5996FBD01D0B016200226E3D /* FLCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCTabBarViewController.m; sourceTree = "<group>"; };
-		5996FBD31D0B019000226E3D /* FLCTabBarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCTabBarAnimator.h; sourceTree = "<group>"; };
-		5996FBD41D0B019000226E3D /* FLCTabBarAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCTabBarAnimator.m; sourceTree = "<group>"; };
 		5996FBD61D0B08B900226E3D /* NSViewController+Containment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+Containment.h"; sourceTree = "<group>"; };
 		5996FBD71D0B08B900226E3D /* NSViewController+Containment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+Containment.m"; sourceTree = "<group>"; };
 		59A0ED9E1D1C3E3F007B7288 /* FLCAPIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCAPIConfiguration.h; sourceTree = "<group>"; };
@@ -225,15 +228,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5905A9631D26B91E00C12EF9 /* FeedCellView */ = {
-			isa = PBXGroup;
-			children = (
-				5905A9641D26B96800C12EF9 /* FLCFeedCellView.h */,
-				5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */,
-			);
-			path = FeedCellView;
-			sourceTree = "<group>";
-		};
 		5932642D1D2AEA9800F40331 /* NSImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +235,42 @@
 				593264321D2AEB9A00F40331 /* NSImage+Resize.m */,
 			);
 			path = NSImage;
+			sourceTree = "<group>";
+		};
+		593264371D2AF49D00F40331 /* MouseTrackingView */ = {
+			isa = PBXGroup;
+			children = (
+				593264381D2AF4CF00F40331 /* FLCMouseTrackingView.h */,
+				593264391D2AF4CF00F40331 /* FLCMouseTrackingView.m */,
+			);
+			path = MouseTrackingView;
+			sourceTree = "<group>";
+		};
+		5932643C1D2AFA0200F40331 /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				593264411D2AFB5700F40331 /* TabBarAnimator */,
+				5932643D1D2AFA4300F40331 /* WobbleAnimator */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
+		5932643D1D2AFA4300F40331 /* WobbleAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				5932643E1D2AFA5B00F40331 /* FLCWobbleAnimator.h */,
+				5932643F1D2AFA5B00F40331 /* FLCWobbleAnimator.m */,
+			);
+			path = WobbleAnimator;
+			sourceTree = "<group>";
+		};
+		593264411D2AFB5700F40331 /* TabBarAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				593264421D2AFB5700F40331 /* FLCTabBarAnimator.h */,
+				593264431D2AFB5700F40331 /* FLCTabBarAnimator.m */,
+			);
+			path = TabBarAnimator;
 			sourceTree = "<group>";
 		};
 		594C42FA1D1C3B1400B9B221 /* Networking */ = {
@@ -536,6 +566,7 @@
 				595888FD1D25868500BF95DA /* Vendor */,
 				5996FBBF1D0AF55700226E3D /* Definitions */,
 				5996FBAD1D0AF27900226E3D /* Categories */,
+				5932643C1D2AFA0200F40331 /* Animators */,
 				59F5F9F01D1AEADA00B38E35 /* Builders */,
 				5996FBA81D0AEECD00226E3D /* Storyboards */,
 				599245BB1D1D503400EE72E6 /* Models */,
@@ -593,7 +624,6 @@
 		5996FBA41D0AEE2500226E3D /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				5996FBD21D0B017100226E3D /* Animator */,
 				5996FBCE1D0B016200226E3D /* ViewController */,
 			);
 			path = TabBarController;
@@ -700,15 +730,6 @@
 				5996FBD01D0B016200226E3D /* FLCTabBarViewController.m */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		5996FBD21D0B017100226E3D /* Animator */ = {
-			isa = PBXGroup;
-			children = (
-				5996FBD31D0B019000226E3D /* FLCTabBarAnimator.h */,
-				5996FBD41D0B019000226E3D /* FLCTabBarAnimator.m */,
-			);
-			path = Animator;
 			sourceTree = "<group>";
 		};
 		59A0ED9D1D1C3E3F007B7288 /* Configuration */ = {
@@ -829,7 +850,7 @@
 		59F5F9EA1D1AE95200B38E35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5905A9631D26B91E00C12EF9 /* FeedCellView */,
+				593264371D2AF49D00F40331 /* MouseTrackingView */,
 				595888F91D2570CB00BF95DA /* ColorizedView */,
 			);
 			path = Views;
@@ -1095,7 +1116,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */,
 				593264361D2AF2AF00F40331 /* FLCNoTitleTransformer.m in Sources */,
 				599245C01D1D50C300EE72E6 /* FLCApplicationDB.xcdatamodeld in Sources */,
 				599245CF1D1D57B300EE72E6 /* HCDCoreDataStackController+NSManagedObjectContext.m in Sources */,
@@ -1118,13 +1138,13 @@
 				599245D81D1D66E500EE72E6 /* FLCAPIResponseHandler.m in Sources */,
 				593264331D2AEB9A00F40331 /* NSImage+Resize.m in Sources */,
 				5970385B1D11FEAB00E913F8 /* NSColor+HexString.m in Sources */,
-				5996FBD51D0B019000226E3D /* FLCTabBarAnimator.m in Sources */,
 				597038521D11E6FE00E913F8 /* NSViewController+SegueDestination.m in Sources */,
 				5996FBD81D0B08B900226E3D /* NSViewController+Containment.m in Sources */,
 				5996FBB51D0AF3D200226E3D /* NSViewController+Storyboard.m in Sources */,
 				596672FA1D0F5C9600E7EA15 /* FLCMainViewController.m in Sources */,
 				5992460F1D1D76D600EE72E6 /* FLCFeedPage+CoreDataProperties.m in Sources */,
 				599246151D1D776800EE72E6 /* NSManagedObject+Convenience.m in Sources */,
+				593264401D2AFA5B00F40331 /* FLCWobbleAnimator.m in Sources */,
 				597038571D11EE3E00E913F8 /* FLCTabBarButton.m in Sources */,
 				59A0EDC31D1C4932007B7288 /* FLCFeedMapper.m in Sources */,
 				595888F81D25648000BF95DA /* FLCPhotoCollectionViewItem.m in Sources */,
@@ -1135,10 +1155,12 @@
 				5958890C1D25868500BF95DA /* OTWebImageDownloadRequest.m in Sources */,
 				5996FBD11D0B016200226E3D /* FLCTabBarViewController.m in Sources */,
 				59A0EDBE1D1C487E007B7288 /* FLCFeedLoader.m in Sources */,
+				593264441D2AFB5700F40331 /* FLCTabBarAnimator.m in Sources */,
 				5992460E1D1D76D600EE72E6 /* FLCFeedPhoto.m in Sources */,
 				5996FB781D0AEDA600226E3D /* main.m in Sources */,
 				59A0EDA01D1C3E3F007B7288 /* FLCAPIConfiguration.m in Sources */,
 				5996FB751D0AEDA600226E3D /* AppDelegate.m in Sources */,
+				5932643A1D2AF4CF00F40331 /* FLCMouseTrackingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

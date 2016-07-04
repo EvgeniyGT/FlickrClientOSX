@@ -68,8 +68,8 @@
         <!--Photo Collection View Item-->
         <scene sceneID="Dl9-m1-zuf">
             <objects>
-                <collectionViewItem storyboardIdentifier="FLCPhotoCollectionViewItem" id="fNr-Ci-BhA" customClass="FLCPhotoCollectionViewItem" sceneMemberID="viewController">
-                    <view key="view" id="6K3-es-43h" customClass="FLCFeedCellView">
+                <collectionViewItem storyboardIdentifier="FLCPhotoCollectionViewItem" id="fNr-Ci-BhA" userLabel="Photo Collection View Item" customClass="FLCPhotoCollectionViewItem" sceneMemberID="viewController">
+                    <view key="view" id="6K3-es-43h" customClass="FLCMouseTrackingView">
                         <rect key="frame" x="0.0" y="0.0" width="220" height="276"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -80,6 +80,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="266"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="huj-Hu-r7I"/>
                                     </imageView>
+                                    <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zFc-sV-aAx" customClass="FLCColorizedView">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="266"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="hmA-Wh-xns" customClass="FLCColorizedView">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                         <subviews>
@@ -117,9 +125,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wbT-tb-fRb" firstAttribute="top" secondItem="Jsv-E0-9p6" secondAttribute="top" id="1QV-U7-5xo"/>
+                                    <constraint firstItem="zFc-sV-aAx" firstAttribute="leading" secondItem="Jsv-E0-9p6" secondAttribute="leading" id="2eJ-ON-d1O"/>
+                                    <constraint firstItem="zFc-sV-aAx" firstAttribute="top" secondItem="Jsv-E0-9p6" secondAttribute="top" id="7vH-zH-Fu0"/>
                                     <constraint firstAttribute="trailing" secondItem="wbT-tb-fRb" secondAttribute="trailing" id="BAf-Op-3QD"/>
+                                    <constraint firstAttribute="trailing" secondItem="zFc-sV-aAx" secondAttribute="trailing" id="ERL-lV-TXC"/>
                                     <constraint firstAttribute="bottom" secondItem="wbT-tb-fRb" secondAttribute="bottom" id="FaG-Dq-ib5"/>
                                     <constraint firstAttribute="trailing" secondItem="hmA-Wh-xns" secondAttribute="trailing" id="O0d-jX-m8M"/>
+                                    <constraint firstAttribute="bottom" secondItem="zFc-sV-aAx" secondAttribute="bottom" id="USg-ws-gsv"/>
                                     <constraint firstItem="hmA-Wh-xns" firstAttribute="leading" secondItem="Jsv-E0-9p6" secondAttribute="leading" id="arb-6T-kMN"/>
                                     <constraint firstItem="wbT-tb-fRb" firstAttribute="leading" secondItem="Jsv-E0-9p6" secondAttribute="leading" id="dSW-Pp-267"/>
                                     <constraint firstAttribute="bottom" secondItem="hmA-Wh-xns" secondAttribute="bottom" id="zxH-m5-IWw"/>
@@ -130,16 +142,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
+                            <imageView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kl5-Je-1Ky">
+                                <rect key="frame" x="78" y="106" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="CIS-wD-jNf"/>
+                                    <constraint firstAttribute="width" constant="64" id="KHG-pf-VWq"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="view-icon" id="DF9-LC-iQm"/>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Kl5-Je-1Ky" firstAttribute="centerY" secondItem="6K3-es-43h" secondAttribute="centerY" id="5JK-Js-dgV"/>
                             <constraint firstAttribute="bottom" secondItem="Jsv-E0-9p6" secondAttribute="bottom" id="67Q-Na-gh7"/>
+                            <constraint firstItem="Kl5-Je-1Ky" firstAttribute="centerX" secondItem="6K3-es-43h" secondAttribute="centerX" id="9Y4-xb-s9w"/>
                             <constraint firstItem="Jsv-E0-9p6" firstAttribute="top" secondItem="6K3-es-43h" secondAttribute="top" constant="10" id="Dwu-x7-a40"/>
                             <constraint firstItem="Jsv-E0-9p6" firstAttribute="leading" secondItem="6K3-es-43h" secondAttribute="leading" constant="10" id="a1G-Ma-HYH"/>
                             <constraint firstAttribute="trailing" secondItem="Jsv-E0-9p6" secondAttribute="trailing" constant="10" id="yWO-a4-czi"/>
                         </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="fNr-Ci-BhA" id="Anu-bC-kaQ"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="contentContainerView" destination="Jsv-E0-9p6" id="MCm-fk-wD9"/>
+                        <outlet property="overlayView" destination="zFc-sV-aAx" id="sJL-Eg-Dcb"/>
                         <outlet property="photoImageView" destination="wbT-tb-fRb" id="JR2-qV-Ns1"/>
+                        <outlet property="reviewImageView" destination="Kl5-Je-1Ky" id="FSd-XQ-RxL"/>
                     </connections>
                 </collectionViewItem>
                 <customObject id="MdC-sn-ahI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -148,4 +176,7 @@
             <point key="canvasLocation" x="466" y="1062"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="view-icon" width="64" height="64"/>
+    </resources>
 </document>

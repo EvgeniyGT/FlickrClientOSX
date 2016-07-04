@@ -8,20 +8,39 @@
 
 #import "FLCPhotoCollectionViewItem.h"
 #import "FLCFeedPhoto.h"
-#import "FLCFeedCellView.h"
+#import "FLCMouseTrackingView.h"
+#import "FLCWobbleAnimator.h"
 
 #import "NSImageView+WebCache.h"
 #import "NSColor+HexString.h"
 #import "NSImage+Resize.h"
 
-@interface FLCPhotoCollectionViewItem () <NSImageViewWebCacheDelegate>
+@interface FLCPhotoCollectionViewItem ()
+<NSImageViewWebCacheDelegate,
+FLCMouseTrackingDelegate>
 
 /* UI */
+@property (weak, nonatomic) IBOutlet NSView *contentContainerView;
 @property (weak, nonatomic) IBOutlet NSImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet NSView *overlayView;
+@property (weak, nonatomic) IBOutlet NSImageView *reviewImageView;
+
+/* Animator */
+@property (strong, nonatomic) FLCWobbleAnimator *animator;
 
 @end
 
 @implementation FLCPhotoCollectionViewItem
+
+#pragma mark - Accessors
+
+- (FLCWobbleAnimator *)animator
+{
+    if (!_animator) {
+        _animator = [[FLCWobbleAnimator alloc] initWithTargetView:self.contentContainerView];
+    }
+    return _animator;
+}
 
 #pragma mark - Life Cycle
 
@@ -52,6 +71,11 @@
     [self.photoImageView setImageURL:url];
 }
 
+- (void)showReviewIcon:(BOOL)show
+{
+    self.reviewImageView.hidden = self.overlayView.hidden = !show;
+}
+
 #pragma mark - copyWithZone
 
 - (instancetype)copyWithZone:(NSZone *)zone
@@ -74,5 +98,23 @@
     NSLog(@"image loading failed");
 }
 
+#pragma mark - FLCMouseTrackingDelegate
+
+- (void)mouseTracking:(FLCMouseTrackingView *)mouseTracking mouseEntered:(NSEvent *)theEvent
+{
+    if (self.photoImageView.image) {
+        [self.animator startAnimation];
+        [self showReviewIcon:YES];
+    } else {
+        [self.animator stopAnimation];
+        [self showReviewIcon:NO];
+    }
+}
+
+- (void)mouseTracking:(FLCMouseTrackingView *)mouseTracking mouseExited:(NSEvent *)theEvent
+{
+    [self.animator stopAnimation];
+    [self showReviewIcon:NO];
+}
 
 @end
