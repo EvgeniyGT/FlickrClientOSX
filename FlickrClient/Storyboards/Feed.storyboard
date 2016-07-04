@@ -13,7 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-ek-Mbx">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-ek-Mbx">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="0QA-83-oho">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>

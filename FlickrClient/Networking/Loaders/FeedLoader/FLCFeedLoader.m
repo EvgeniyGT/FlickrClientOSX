@@ -24,7 +24,7 @@ static NSString * const FLCFeedLoaderRequestKeyPage     = @"page";
 /* Default Request Values */
 static NSString * const FLCFeedLoaderFormatValue        = @"json";
 static NSString * const FLCFeedLoaderURLExtrasValue     = @"url_l";
-static NSUInteger const FLCFeedLoaderPerPageValue       = 100;
+static NSUInteger const FLCFeedLoaderPerPageValue       = 30;
 
 @interface FLCFeedLoader ()
 @property (nonatomic, readwrite) FLCRequestManager *requestManager;
