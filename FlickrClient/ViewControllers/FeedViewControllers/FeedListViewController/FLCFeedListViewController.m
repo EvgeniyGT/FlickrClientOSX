@@ -59,8 +59,6 @@
     NSString *itemStoryboardIdentifier = NSStringFromClass([FLCPhotoCollectionViewItem class]);
     NSCollectionViewItem *item = [self.storyboard instantiateControllerWithIdentifier:itemStoryboardIdentifier];
     self.collectionView.itemPrototype = item;
-    self.collectionView.wantsLayer = YES;
-    self.collectionView.layer.backgroundColor = [NSColor yellowColor].CGColor;
 }
 
 #pragma mark - Data Management

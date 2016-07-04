@@ -8,8 +8,10 @@
 
 #import "FLCPhotoCollectionViewItem.h"
 #import "FLCFeedPhoto.h"
+#import "FLCFeedCellView.h"
 
 #import "NSImageView+WebCache.h"
+#import "NSColor+HexString.h"
 
 @interface FLCPhotoCollectionViewItem ()
 
@@ -26,17 +28,7 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"self.photoImageView - %@", self.photoImageView);
-    [self setupAppearance];
     [self reloadPhotoImage];
-}
-
-#pragma mark - Appearance
-
-- (void)setupAppearance
-{
-    self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor orangeColor].CGColor;
 }
 
 #pragma mark - Update with FLCFeedPhoto
@@ -45,7 +37,6 @@
 {
     [super setRepresentedObject:feedPhoto];
     if (feedPhoto && [self isViewLoaded]) {
-        NSLog(@"self.photoImageView  - %@", self.photoImageView);
         [self reloadPhotoImage];
     }
 }
@@ -57,7 +48,15 @@
     FLCFeedPhoto *feedPhoto = self.representedObject;
     NSURL *url = [NSURL URLWithString:feedPhoto.url];
     [self.photoImageView setImageURL:url];
+}
 
+#pragma mark - Copy
+
+- (instancetype)copyWithZone:(NSZone *)zone
+{
+    NSString *itemStoryboardIdentifier = NSStringFromClass([FLCPhotoCollectionViewItem class]);
+    FLCPhotoCollectionViewItem *item = [self.storyboard instantiateControllerWithIdentifier:itemStoryboardIdentifier];
+    return item;
 }
 
 @end

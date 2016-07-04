@@ -10,6 +10,8 @@
 
 @implementation FLCFeedListArrayController
 
+#pragma mark - Init
+
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];

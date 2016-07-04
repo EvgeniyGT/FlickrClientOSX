@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */; };
 		595888F31D255A6F00BF95DA /* FLCFeedListArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */; };
 		595888F81D25648000BF95DA /* FLCPhotoCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F71D25648000BF95DA /* FLCPhotoCollectionViewItem.m */; };
 		595888FC1D2570E800BF95DA /* FLCColorizedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888FB1D2570E800BF95DA /* FLCColorizedView.m */; };
@@ -80,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		4C842DCD70CC4EE2986C9F0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5905A9641D26B96800C12EF9 /* FLCFeedCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedCellView.h; sourceTree = "<group>"; };
+		5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedCellView.m; sourceTree = "<group>"; };
 		595888F11D255A6F00BF95DA /* FLCFeedListArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedListArrayController.h; sourceTree = "<group>"; };
 		595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedListArrayController.m; sourceTree = "<group>"; };
 		595888F61D25648000BF95DA /* FLCPhotoCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCPhotoCollectionViewItem.h; sourceTree = "<group>"; };
@@ -216,6 +219,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5905A9631D26B91E00C12EF9 /* FeedCellView */ = {
+			isa = PBXGroup;
+			children = (
+				5905A9641D26B96800C12EF9 /* FLCFeedCellView.h */,
+				5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */,
+			);
+			path = FeedCellView;
+			sourceTree = "<group>";
+		};
 		594C42FA1D1C3B1400B9B221 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +811,7 @@
 		59F5F9EA1D1AE95200B38E35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5905A9631D26B91E00C12EF9 /* FeedCellView */,
 				595888F91D2570CB00BF95DA /* ColorizedView */,
 			);
 			path = Views;
@@ -1064,6 +1077,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */,
 				599245C01D1D50C300EE72E6 /* FLCApplicationDB.xcdatamodeld in Sources */,
 				599245CF1D1D57B300EE72E6 /* HCDCoreDataStackController+NSManagedObjectContext.m in Sources */,
 				5992460D1D1D76D600EE72E6 /* FLCFeedPhoto+CoreDataProperties.m in Sources */,
