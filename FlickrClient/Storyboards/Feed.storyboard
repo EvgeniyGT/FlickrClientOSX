@@ -73,48 +73,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="220" height="276"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-E0-9p6">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-E0-9p6" customClass="FLCColorizedView">
                                 <rect key="frame" x="10" y="0.0" width="200" height="266"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-tb-fRb">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="266"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="huj-Hu-r7I"/>
                                     </imageView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="hmA-Wh-xns" customClass="FLCColorizedView">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <subviews>
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Idv-qc-4tq">
+                                                <rect key="frame" x="8" y="3" width="184" height="44"/>
+                                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="WT1-sg-TaQ">
+                                                    <font key="font" size="12" name="AvenirNext-Regular"/>
+                                                    <string key="title">Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label</string>
+                                                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <binding destination="fNr-Ci-BhA" name="displayPatternValue1" keyPath="self.representedObject.title" id="rik-4F-XYt">
+                                                        <dictionary key="options">
+                                                            <string key="NSDisplayPattern">%{value1}@</string>
+                                                            <string key="NSValueTransformerName">FLCNoTitleTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Idv-qc-4tq" secondAttribute="trailing" constant="10" id="9Js-Wn-VCF"/>
+                                            <constraint firstItem="Idv-qc-4tq" firstAttribute="top" secondItem="hmA-Wh-xns" secondAttribute="top" constant="3" id="Kvw-ZE-FQZ"/>
+                                            <constraint firstAttribute="height" constant="50" id="LRJ-ks-B9H"/>
+                                            <constraint firstAttribute="bottom" secondItem="Idv-qc-4tq" secondAttribute="bottom" constant="3" id="YrD-GJ-Lmb"/>
+                                            <constraint firstItem="Idv-qc-4tq" firstAttribute="leading" secondItem="hmA-Wh-xns" secondAttribute="leading" constant="10" id="yPl-id-1YJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.74207974137931032" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wbT-tb-fRb" firstAttribute="top" secondItem="Jsv-E0-9p6" secondAttribute="top" id="1QV-U7-5xo"/>
                                     <constraint firstAttribute="trailing" secondItem="wbT-tb-fRb" secondAttribute="trailing" id="BAf-Op-3QD"/>
                                     <constraint firstAttribute="bottom" secondItem="wbT-tb-fRb" secondAttribute="bottom" id="FaG-Dq-ib5"/>
+                                    <constraint firstAttribute="trailing" secondItem="hmA-Wh-xns" secondAttribute="trailing" id="O0d-jX-m8M"/>
+                                    <constraint firstItem="hmA-Wh-xns" firstAttribute="leading" secondItem="Jsv-E0-9p6" secondAttribute="leading" id="arb-6T-kMN"/>
                                     <constraint firstItem="wbT-tb-fRb" firstAttribute="leading" secondItem="Jsv-E0-9p6" secondAttribute="leading" id="dSW-Pp-267"/>
+                                    <constraint firstAttribute="bottom" secondItem="hmA-Wh-xns" secondAttribute="bottom" id="zxH-m5-IWw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bDL-84-SnH">
-                                <rect key="frame" x="8" y="0.0" width="204" height="23"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="SLQ-MY-GSQ">
-                                    <font key="font" size="13" name="AvenirNext-Regular"/>
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <binding destination="fNr-Ci-BhA" name="displayPatternValue1" keyPath="self.representedObject.title" id="2Ef-Ra-FV9">
-                                        <dictionary key="options">
-                                            <string key="NSDisplayPattern">%{value1}@</string>
-                                        </dictionary>
-                                    </binding>
-                                </connections>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Jsv-E0-9p6" secondAttribute="bottom" id="67Q-Na-gh7"/>
                             <constraint firstItem="Jsv-E0-9p6" firstAttribute="top" secondItem="6K3-es-43h" secondAttribute="top" constant="10" id="Dwu-x7-a40"/>
-                            <constraint firstItem="bDL-84-SnH" firstAttribute="leading" secondItem="6K3-es-43h" secondAttribute="leading" constant="10" id="HER-rm-ZaT"/>
-                            <constraint firstAttribute="trailing" secondItem="bDL-84-SnH" secondAttribute="trailing" constant="10" id="KJM-GE-vAG"/>
-                            <constraint firstAttribute="bottom" secondItem="bDL-84-SnH" secondAttribute="bottom" id="O9z-Kf-NPW"/>
                             <constraint firstItem="Jsv-E0-9p6" firstAttribute="leading" secondItem="6K3-es-43h" secondAttribute="leading" constant="10" id="a1G-Ma-HYH"/>
                             <constraint firstAttribute="trailing" secondItem="Jsv-E0-9p6" secondAttribute="trailing" constant="10" id="yWO-a4-czi"/>
                         </constraints>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */; };
 		593264331D2AEB9A00F40331 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264321D2AEB9A00F40331 /* NSImage+Resize.m */; };
+		593264361D2AF2AF00F40331 /* FLCNoTitleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 593264351D2AF2AF00F40331 /* FLCNoTitleTransformer.m */; };
 		595888F31D255A6F00BF95DA /* FLCFeedListArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */; };
 		595888F81D25648000BF95DA /* FLCPhotoCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888F71D25648000BF95DA /* FLCPhotoCollectionViewItem.m */; };
 		595888FC1D2570E800BF95DA /* FLCColorizedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 595888FB1D2570E800BF95DA /* FLCColorizedView.m */; };
@@ -86,6 +87,8 @@
 		5905A9651D26B96800C12EF9 /* FLCFeedCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedCellView.m; sourceTree = "<group>"; };
 		593264311D2AEB9A00F40331 /* NSImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Resize.h"; sourceTree = "<group>"; };
 		593264321D2AEB9A00F40331 /* NSImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Resize.m"; sourceTree = "<group>"; };
+		593264341D2AF2AF00F40331 /* FLCNoTitleTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCNoTitleTransformer.h; sourceTree = "<group>"; };
+		593264351D2AF2AF00F40331 /* FLCNoTitleTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCNoTitleTransformer.m; sourceTree = "<group>"; };
 		595888F11D255A6F00BF95DA /* FLCFeedListArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCFeedListArrayController.h; sourceTree = "<group>"; };
 		595888F21D255A6F00BF95DA /* FLCFeedListArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCFeedListArrayController.m; sourceTree = "<group>"; };
 		595888F61D25648000BF95DA /* FLCPhotoCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCPhotoCollectionViewItem.h; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 			children = (
 				599245F61D1D734A00EE72E6 /* FLCDataTransformer.h */,
 				599245F71D1D734A00EE72E6 /* FLCDataTransformer.m */,
+				593264341D2AF2AF00F40331 /* FLCNoTitleTransformer.h */,
+				593264351D2AF2AF00F40331 /* FLCNoTitleTransformer.m */,
 			);
 			path = Transformers;
 			sourceTree = "<group>";
@@ -1091,6 +1096,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5905A9661D26B96800C12EF9 /* FLCFeedCellView.m in Sources */,
+				593264361D2AF2AF00F40331 /* FLCNoTitleTransformer.m in Sources */,
 				599245C01D1D50C300EE72E6 /* FLCApplicationDB.xcdatamodeld in Sources */,
 				599245CF1D1D57B300EE72E6 /* HCDCoreDataStackController+NSManagedObjectContext.m in Sources */,
 				5992460D1D1D76D600EE72E6 /* FLCFeedPhoto+CoreDataProperties.m in Sources */,
